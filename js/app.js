@@ -33,11 +33,19 @@ new Vue({
             
         },
         prepareItems: function(data){
+            let me = this;
             this.items = [];
-            for(var i in data){
-                let elem = data[i];
-                this.items.push({'name':elem.name,'total':10000,'limit':elem.monthlyBudget})
-            }
+            data.forEach(function(expense){
+                item = {'name' : expense.name,'limit': expense.monthlyBudget,total: 25};
+                me.items.push(item);
+                axios.get(getHost() + 'walletPosition/' + expense.id)
+                .then(function(res){
+                    item.total = res.data.total;
+                }).catch(function(err){
+                    console.error(err)
+                });
+    
+            })
         }
     }
 });
