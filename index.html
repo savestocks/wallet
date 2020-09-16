@@ -7,6 +7,7 @@
     <body>
         <div id="app" >
             <div>
+                <h1>Carteira</h1>
                 <div class="row">
                     <ander-component v-for="it in items" :name="it.name" :total="it.total" :limit="it.limit"></ander-component>
                 </div>
@@ -14,7 +15,7 @@
         </div>
 
         <script id="anderCmp" type="text/x-template">
-            <div class="card col-6 col-sm-3 col-md-2">
+            <div class="card col-5 col-sm-5 col-md-3">
                 <div class="innerCard image010" :style="styleImage">{{name}}</div>
                 <div class="cardFooter" :style="styles">{{consumed}}</div>
             </div>
