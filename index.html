@@ -8,19 +8,7 @@
         <div id="app">
             <div>
                 <div class="row">
-                    <ander-component name="Supermercado" :total="10" :limit="100"></ander-component>
-                    <ander-component name="Combustível" :total="8324" :limit="8000"></ander-component>
-                    <ander-component name="Vestuario" :total="1333" :limit="4000"></ander-component>
-                    <ander-component></ander-component>
-                    <ander-component></ander-component>
-                    <ander-component></ander-component>
-                    <ander-component></ander-component>
-                    <ander-component></ander-component>
-                    <ander-component></ander-component>
-                    <ander-component></ander-component>
-                    <ander-component></ander-component>
-                    <ander-component></ander-component>
-                    <ander-component></ander-component>
+                    <ander-component v-for="it in items" name="it.name" :total="it.total" :limit="it.limit"></ander-component>
                 </div>
             </div>
         </div>
@@ -32,6 +20,7 @@
             </div>
         </script>
     </body>
+    <script src="js/axios.min.js" type="text/javascript"></script>
     <script src="js/vue.min.js" type="text/javascript"></script>
     <script src="js/ander.js" type="text/javascript"></script>
     <script src="js/app.js" type="text/javascript"></script>
