@@ -22,6 +22,7 @@ Vue.component('ander-component', {
     created: function(){
 
         this.percent = Math.floor(this.total / this.limit * 100);
+        console.warn(this.total,this.limit)
 
     },
     computed: {
