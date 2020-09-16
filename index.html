@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/app.css">
+
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <div class="row">
+                    <ander-component name="Supermercado" :total="10" :limit="100"></ander-component>
+                    <ander-component name="Combustível" :total="8324" :limit="8000"></ander-component>
+                    <ander-component name="Vestuario" :total="1333" :limit="4000"></ander-component>
+                    <ander-component></ander-component>
+                    <ander-component></ander-component>
+                    <ander-component></ander-component>
+                    <ander-component></ander-component>
+                    <ander-component></ander-component>
+                    <ander-component></ander-component>
+                    <ander-component></ander-component>
+                    <ander-component></ander-component>
+                    <ander-component></ander-component>
+                    <ander-component></ander-component>
+                </div>
+            </div>
+        </div>
+
+        <script id="anderCmp" type="text/x-template">
+            <div class="card col-6 col-sm-3 col-md-2">
+                <div class="innerCard image010" :style="styleImage">{{name}}</div>
+                <div class="cardFooter" :style="styles">{{consumed}}</div>
+            </div>
+        </script>
+    </body>
+    <script src="js/vue.min.js" type="text/javascript"></script>
+    <script src="js/ander.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+</html>

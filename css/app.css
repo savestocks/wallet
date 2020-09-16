@@ -1,0 +1,23 @@
+.card {
+    border: 1px solid;
+    border-color: #ccc;
+    width: 100%;
+    height: 11rem;
+    padding: 0.5rem;
+}
+.innerCard {
+    border: 1px solid;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.cardFooter {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.image010 {
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
