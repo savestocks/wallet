@@ -15,14 +15,14 @@ Vue.component('ander-component', {
 
     data: function(){
         return {
-            percent: 0
+            percent: 0,
+            countPercent: 0,
+            interval: null
         }
     },
     
     created: function(){
-
-        this.percent = Math.floor(this.total / this.limit * 100);
-        console.warn(this.total,this.limit)
+        this.interval = setInterval(this.sumPercent,100);
 
     },
     computed: {
@@ -85,6 +85,16 @@ Vue.component('ander-component', {
                 default:
                     return '#AA555588';
             }            
+        },
+        sumPercent: function(){
+            let max = Math.floor(this.total / this.limit * 100);
+            if(this.countPercent >= max ){
+                clearInterval(this.interval);
+            }else{
+                this.countPercent = this.countPercent + 7;
+                this.percent = this.countPercent;
+            }
+
         }
 	}
 });
