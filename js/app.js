@@ -5,6 +5,7 @@ var getHost = function(){
     }
     return 'http://localhost:8081' + endpoint;
 }
+var months = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 new Vue({
     el: "#app",
     data: function(){
@@ -16,7 +17,14 @@ new Vue({
     created: function(){
         this.loadItems();
     },
-
+    computed: {
+        currentMonth: function(){
+            let d = new Date();
+            let y = d.getFullYear();
+            let m = d.getMonth();
+            return months[m] + "/" + y
+        }
+    },
     methods: {
         loadItems: function(){
         

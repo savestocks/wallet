@@ -7,7 +7,7 @@
     <body>
         <div id="app" >
             <div>
-                <h1>Carteira</h1>
+                <h1>Carteira {{currentMonth}}</h1>
                 <div class="row">
                     <ander-component v-for="it in items" :name="it.name" :total="it.total" :limit="it.limit"></ander-component>
                 </div>
@@ -16,7 +16,8 @@
 
         <script id="anderCmp" type="text/x-template">
             <div class="card col-5">
-                <div class="innerCard image010" :style="styleImage">{{name}}
+                <div class="innerCard image010" :style="styleImage">
+                    <span class="cardTitle">{{name}}</span>
                     <div class="cardFooter" :style="styles">{{consumed}}</div>
                 </div>
             </div>
