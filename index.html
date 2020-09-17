@@ -1,5 +1,6 @@
-<html>
+<html >
     <head>
+        <meta charset="UTF-8">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/app.css">
 
@@ -18,6 +19,7 @@
             <div class="card col-5">
                 <div class="innerCard image010" :style="styleImage">
                     <span class="cardTitle">{{name}}</span>
+                    <span class="cardAvailable" :class="{'cardExpired':available <= 0 }">{{availableText}}</span>
                     <div class="cardFooter" :style="styles">{{consumed}}</div>
                 </div>
             </div>

@@ -19,6 +19,14 @@
     font-weight: bolder;
     margin-left: 0.5rem;
 }
+.cardAvailable {
+    color: #55AA55;
+    font-weight: bolder;
+
+}
+.cardExpired {
+    color: #FF5555 !important;
+}
 .cardFooter {
     position: absolute;
     text-align: center;

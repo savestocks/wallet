@@ -26,6 +26,12 @@ Vue.component('ander-component', {
 
     },
     computed: {
+        available: function(){
+            return  (this.limit - this.total) / 100;
+        },
+        availableText: function(){
+            return this.available  <= 0 ? "Sem orçamento" :"Disponível: " +  this.available.toFixed(2) + " €";
+        },
         consumed: function(){
             return this.percent + "%";
         },
