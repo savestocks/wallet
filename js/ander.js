@@ -95,6 +95,7 @@ Vue.component('ander-component', {
         sumPercent: function(){
             let max = Math.floor(this.total / this.limit * 100);
             if(this.countPercent >= max ){
+                this.percent = max;
                 clearInterval(this.interval);
             }else{
                 this.countPercent = this.countPercent + 7;
